@@ -149,31 +149,76 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden px-4 pb-4 space-y-2 font-semibold">
-          <NavLink to="/" className="block hover:text-blue-500">
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive ? "block text-blue-600 font-bold" : "block hover:text-blue-500"
+            }
+          >
             Home
           </NavLink>
-          <NavLink to="/about" className="block hover:text-blue-500">
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              isActive ? "block text-blue-600 font-bold" : "block hover:text-blue-500"
+            }
+          >
             About Journal
           </NavLink>
-          <NavLink to="/guidelines" className="block hover:text-blue-500">
+          <NavLink
+            to="/guidelines"
+            className={({ isActive }) =>
+              isActive ? "block text-blue-600 font-bold" : "block hover:text-blue-500"
+            }
+          >
             Authors' Guidelines
           </NavLink>
-          <NavLink to="/editorial-team" className="block hover:text-blue-500">
+          <NavLink
+            to="/editorial-team"
+            className={({ isActive }) =>
+              isActive ? "block text-blue-600 font-bold" : "block hover:text-blue-500"
+            }
+          >
             Editorial Team
           </NavLink>
-          <NavLink to="/privacy" className="block hover:text-blue-500">
+          <NavLink
+            to="/privacy"
+            className={({ isActive }) =>
+              isActive ? "block text-blue-600 font-bold" : "block hover:text-blue-500"
+            }
+          >
             Privacy Statement
           </NavLink>
-          <NavLink to="/contact" className="block hover:text-blue-500">
+          <NavLink
+            to="/contact"
+            className={({ isActive }) =>
+              isActive ? "block text-blue-600 font-bold" : "block hover:text-blue-500"
+            }
+          >
             Contact
           </NavLink>
-          <NavLink to="/board" className="block hover:text-blue-500">
+          <NavLink
+            to="/board"
+            className={({ isActive }) =>
+              isActive ? "block text-blue-600 font-bold" : "block hover:text-blue-500"
+            }
+          >
             Current Issue
           </NavLink>
-          <NavLink to="/authors" className="block hover:text-blue-500">
+          <NavLink
+            to="/authors"
+            className={({ isActive }) =>
+              isActive ? "block text-blue-600 font-bold" : "block hover:text-blue-500"
+            }
+          >
             Archives
           </NavLink>
-          <NavLink to="/process" className="block hover:text-blue-500">
+          <NavLink
+            to="/process"
+            className={({ isActive }) =>
+              isActive ? "block text-blue-600 font-bold" : "block hover:text-blue-500"
+            }
+          >
             Register
           </NavLink>
         </div>
