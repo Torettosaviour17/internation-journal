@@ -6,48 +6,66 @@ export default function Navbar() {
 
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50">
-      <div className=" mx-auto px-4 flex justify-around items-center">
+      <div className="md:px-12 px-3 flex justify-between items-center">
         {/* Logo */}
         <a href="/">
-          <img src="/journal-logo.jpg" alt="Journal Logo" className="h-[110px]" />
+          <img
+            src="/journal-logo.jpg"
+            alt="Journal Logo"
+            className="h-[110px]"
+          />
         </a>
 
         {/* Desktop Links */}
-        <div className="hidden md:flex space-x-6">
+        <div className="hidden md:flex space-x-6 items-center font-semibold">
           <Link to="/" className="hover:text-blue-500">
             Home
           </Link>
-          <Link to="/aims" className="hover:text-blue-500">
-            Aims & Scope
-          </Link>
+
+          {/* View Journal with Hover Dropdown */}
+          <div className="relative group cursor-pointer">
+            <span className="hover:text-blue-500">View Journal</span>
+            <div className="absolute hidden group-hover:block bg-white shadow-lg rounded-md mt-2 w-52 z-10">
+              <Link to="/about" className="block px-4 py-2 hover:bg-gray-100">
+                About Journal
+              </Link>
+              <Link
+                to="/guidelines"
+                className="block px-4 py-2 hover:bg-gray-100"
+              >
+                Authors' Guidelines
+              </Link>
+              <Link
+                to="/editorial-team"
+                className="block px-4 py-2 hover:bg-gray-100"
+              >
+                Editorial Team
+              </Link>
+              <Link to="/privacy" className="block px-4 py-2 hover:bg-gray-100">
+                Privacy Statement
+              </Link>
+              <Link to="/contact" className="block px-4 py-2 hover:bg-gray-100">
+                Contact
+              </Link>
+            </div>
+          </div>
+
           <Link to="/board" className="hover:text-blue-500">
-            Editorial Board
+            Current Issue
           </Link>
           <Link to="/authors" className="hover:text-blue-500">
-            Instructions for Authors
+            Archives
           </Link>
           <Link to="/process" className="hover:text-blue-500">
-            Editorial Process
+            Register
           </Link>
-          <Link to="/charges" className="hover:text-blue-500">
-            Author Charges
-          </Link>
-          <Link to="/license" className="hover:text-blue-500">
-            License
-          </Link>
-          <Link to="/publisher" className="hover:text-blue-500">
-            Publisher Info
-          </Link>
-          <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
-            Contact Us
-          </button>
         </div>
 
-        {/* Hamburger Icon */}
+        {/* Hamburger Icon for Mobile */}
         <div className="md:hidden flex items-center">
           <button onClick={() => setIsOpen(!isOpen)}>
             <svg
-              className="h-6 w-6"
+              className="h-10 w-10"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -72,36 +90,39 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu - NO DROPDOWN HERE */}
       {isOpen && (
-        <div className="md:hidden px-4 pb-4 space-y-2">
+        <div className="md:hidden px-4 pb-4 space-y-2 font-semibold">
           <Link to="/" className="block hover:text-blue-500">
             Home
           </Link>
-          <Link to="/aims" className="block hover:text-blue-500">
-            Aims & Scope
+
+          {/* All View Journal Links Flat */}
+          <Link to="/about" className="block hover:text-blue-500">
+            About Journal
           </Link>
+          <Link to="/guidelines" className="block hover:text-blue-500">
+            Authors' Guidelines
+          </Link>
+          <Link to="/editorial-team" className="block hover:text-blue-500">
+            Editorial Team
+          </Link>
+          <Link to="/privacy" className="block hover:text-blue-500">
+            Privacy Statement
+          </Link>
+          <Link to="/contact" className="block hover:text-blue-500">
+            Contact
+          </Link>
+
           <Link to="/board" className="block hover:text-blue-500">
-            Editorial Board
+            Current Issue
           </Link>
           <Link to="/authors" className="block hover:text-blue-500">
-            Instructions for Authors
+            Archives
           </Link>
           <Link to="/process" className="block hover:text-blue-500">
-            Editorial Process
+            Register
           </Link>
-          <Link to="/charges" className="block hover:text-blue-500">
-            Author Charges
-          </Link>
-          <Link to="/license" className="block hover:text-blue-500">
-            License
-          </Link>
-          <Link to="/publisher" className="block hover:text-blue-500">
-            Publisher Info
-          </Link>
-          <button className="w-full bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
-            Contact Us
-          </button>
         </div>
       )}
     </nav>
