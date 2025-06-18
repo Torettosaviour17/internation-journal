@@ -7,13 +7,13 @@ export default function Navbar() {
 
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50">
-      <div className="md:px-12 px-3 flex justify-between items-center">
+      <div className="md:px-12 px-3 flex justify-between p-2 items-center">
         {/* Logo */}
         <a href="/">
           <img
             src="/journal-logo.jpg"
             alt="Journal Logo"
-            className="h-[110px]"
+            className="h-[100px]"
           />
         </a>
 
