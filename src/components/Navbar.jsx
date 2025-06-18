@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,11 +19,16 @@ export default function Navbar() {
 
         {/* Desktop Links */}
         <div className="hidden md:flex space-x-6 items-center font-semibold">
-          <Link to="/" className="hover:text-blue-500">
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive ? "text-blue-600 font-bold" : "hover:text-blue-500"
+            }
+          >
             Home
-          </Link>
+          </NavLink>
 
-          {/* View Journal with hover dropdown wrapped in a container */}
+          {/* View Journal Dropdown */}
           <div
             className="relative cursor-pointer"
             onMouseEnter={() => setDropdownOpen(true)}
@@ -32,37 +37,84 @@ export default function Navbar() {
             <span className="hover:text-blue-500">View Journal</span>
             {dropdownOpen && (
               <div className="absolute top-4 flex flex-col bg-white shadow-lg rounded-md mt-2 w-52 z-10">
-                <Link to="/about" className="px-4 py-2 hover:bg-gray-100">
+                <NavLink
+                  to="/about"
+                  className={({ isActive }) =>
+                    `px-4 py-2 ${
+                      isActive ? "bg-blue-100 font-bold" : "hover:bg-gray-100"
+                    }`
+                  }
+                >
                   About Journal
-                </Link>
-                <Link to="/guidelines" className="px-4 py-2 hover:bg-gray-100">
+                </NavLink>
+                <NavLink
+                  to="/guidelines"
+                  className={({ isActive }) =>
+                    `px-4 py-2 ${
+                      isActive ? "bg-blue-100 font-bold" : "hover:bg-gray-100"
+                    }`
+                  }
+                >
                   Authors' Guidelines
-                </Link>
-                <Link
+                </NavLink>
+                <NavLink
                   to="/editorial-team"
-                  className="px-4 py-2 hover:bg-gray-100"
+                  className={({ isActive }) =>
+                    `px-4 py-2 ${
+                      isActive ? "bg-blue-100 font-bold" : "hover:bg-gray-100"
+                    }`
+                  }
                 >
                   Editorial Team
-                </Link>
-                <Link to="/privacy" className="px-4 py-2 hover:bg-gray-100">
+                </NavLink>
+                <NavLink
+                  to="/privacy"
+                  className={({ isActive }) =>
+                    `px-4 py-2 ${
+                      isActive ? "bg-blue-100 font-bold" : "hover:bg-gray-100"
+                    }`
+                  }
+                >
                   Privacy Statement
-                </Link>
-                <Link to="/contact" className="px-4 py-2 hover:bg-gray-100">
+                </NavLink>
+                <NavLink
+                  to="/contact"
+                  className={({ isActive }) =>
+                    `px-4 py-2 ${
+                      isActive ? "bg-blue-100 font-bold" : "hover:bg-gray-100"
+                    }`
+                  }
+                >
                   Contact
-                </Link>
+                </NavLink>
               </div>
             )}
           </div>
 
-          <Link to="/board" className="hover:text-blue-500">
+          <NavLink
+            to="/board"
+            className={({ isActive }) =>
+              isActive ? "text-blue-600 font-bold" : "hover:text-blue-500"
+            }
+          >
             Current Issue
-          </Link>
-          <Link to="/authors" className="hover:text-blue-500">
+          </NavLink>
+          <NavLink
+            to="/authors"
+            className={({ isActive }) =>
+              isActive ? "text-blue-600 font-bold" : "hover:text-blue-500"
+            }
+          >
             Archives
-          </Link>
-          <Link to="/process" className="hover:text-blue-500">
+          </NavLink>
+          <NavLink
+            to="/process"
+            className={({ isActive }) =>
+              isActive ? "text-blue-600 font-bold" : "hover:text-blue-500"
+            }
+          >
             Register
-          </Link>
+          </NavLink>
         </div>
 
         {/* Hamburger Icon for Mobile */}
@@ -97,33 +149,33 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden px-4 pb-4 space-y-2 font-semibold">
-          <Link to="/" className="block hover:text-blue-500">
+          <NavLink to="/" className="block hover:text-blue-500">
             Home
-          </Link>
-          <Link to="/about" className="block hover:text-blue-500">
+          </NavLink>
+          <NavLink to="/about" className="block hover:text-blue-500">
             About Journal
-          </Link>
-          <Link to="/guidelines" className="block hover:text-blue-500">
+          </NavLink>
+          <NavLink to="/guidelines" className="block hover:text-blue-500">
             Authors' Guidelines
-          </Link>
-          <Link to="/editorial-team" className="block hover:text-blue-500">
+          </NavLink>
+          <NavLink to="/editorial-team" className="block hover:text-blue-500">
             Editorial Team
-          </Link>
-          <Link to="/privacy" className="block hover:text-blue-500">
+          </NavLink>
+          <NavLink to="/privacy" className="block hover:text-blue-500">
             Privacy Statement
-          </Link>
-          <Link to="/contact" className="block hover:text-blue-500">
+          </NavLink>
+          <NavLink to="/contact" className="block hover:text-blue-500">
             Contact
-          </Link>
-          <Link to="/board" className="block hover:text-blue-500">
+          </NavLink>
+          <NavLink to="/board" className="block hover:text-blue-500">
             Current Issue
-          </Link>
-          <Link to="/authors" className="block hover:text-blue-500">
+          </NavLink>
+          <NavLink to="/authors" className="block hover:text-blue-500">
             Archives
-          </Link>
-          <Link to="/process" className="block hover:text-blue-500">
+          </NavLink>
+          <NavLink to="/process" className="block hover:text-blue-500">
             Register
-          </Link>
+          </NavLink>
         </div>
       )}
     </nav>
