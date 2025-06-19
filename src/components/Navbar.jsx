@@ -116,38 +116,39 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu - Flat List with Active States */}
+      {/* Mobile Menu - All links flat with Active State */}
       {isOpen && (
         <div className="md:hidden px-4 pb-4 space-y-2 font-semibold">
           <NavLink to="/" className={linkClasses}>
             Home
-          </NavLink>
+          </NavLink>{" "}
+          <br />
           <NavLink to="/current-issues" className={linkClasses}>
             Current Issues
           </NavLink>
+          <br />
           <NavLink to="/archives" className={linkClasses}>
             Archives
           </NavLink>
+          <br />
           <NavLink to="/about-journal" className={linkClasses}>
             The Journal
           </NavLink>
+          <br />
           <NavLink to="/submissions" className={linkClasses}>
             Submissions
           </NavLink>
+          <br />
           <NavLink to="/editorial-team" className={linkClasses}>
             Editorial Team
           </NavLink>
+          <br />
           <NavLink to="/announcements" className={linkClasses}>
             Announcements
           </NavLink>
+          <br />
           <NavLink to="/contact" className={linkClasses}>
             Contact Us
-          </NavLink>
-          <NavLink to="/submission" className={linkClasses}>
-            Submissions
-          </NavLink>
-          <NavLink to="/editorial-team" className={linkClasses}>
-            Editorial Team
           </NavLink>
         </div>
       )}
