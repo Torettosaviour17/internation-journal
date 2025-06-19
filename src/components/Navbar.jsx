@@ -152,7 +152,9 @@ export default function Navbar() {
           <NavLink
             to="/"
             className={({ isActive }) =>
-              isActive ? "block text-blue-600 font-bold" : "block hover:text-blue-500"
+              isActive
+                ? "block text-blue-600 font-bold"
+                : "block hover:text-blue-500"
             }
           >
             Home
@@ -160,7 +162,9 @@ export default function Navbar() {
           <NavLink
             to="/about"
             className={({ isActive }) =>
-              isActive ? "block text-blue-600 font-bold" : "block hover:text-blue-500"
+              isActive
+                ? "block text-blue-600 font-bold"
+                : "block hover:text-blue-500"
             }
           >
             About Journal
@@ -168,7 +172,9 @@ export default function Navbar() {
           <NavLink
             to="/guidelines"
             className={({ isActive }) =>
-              isActive ? "block text-blue-600 font-bold" : "block hover:text-blue-500"
+              isActive
+                ? "block text-blue-600 font-bold"
+                : "block hover:text-blue-500"
             }
           >
             Authors' Guidelines
@@ -176,7 +182,9 @@ export default function Navbar() {
           <NavLink
             to="/editorial-team"
             className={({ isActive }) =>
-              isActive ? "block text-blue-600 font-bold" : "block hover:text-blue-500"
+              isActive
+                ? "block text-blue-600 font-bold"
+                : "block hover:text-blue-500"
             }
           >
             Editorial Team
@@ -184,7 +192,9 @@ export default function Navbar() {
           <NavLink
             to="/privacy"
             className={({ isActive }) =>
-              isActive ? "block text-blue-600 font-bold" : "block hover:text-blue-500"
+              isActive
+                ? "block text-blue-600 font-bold"
+                : "block hover:text-blue-500"
             }
           >
             Privacy Statement
@@ -192,7 +202,9 @@ export default function Navbar() {
           <NavLink
             to="/contact"
             className={({ isActive }) =>
-              isActive ? "block text-blue-600 font-bold" : "block hover:text-blue-500"
+              isActive
+                ? "block text-blue-600 font-bold"
+                : "block hover:text-blue-500"
             }
           >
             Contact
@@ -200,7 +212,9 @@ export default function Navbar() {
           <NavLink
             to="/board"
             className={({ isActive }) =>
-              isActive ? "block text-blue-600 font-bold" : "block hover:text-blue-500"
+              isActive
+                ? "block text-blue-600 font-bold"
+                : "block hover:text-blue-500"
             }
           >
             Current Issue
@@ -208,7 +222,9 @@ export default function Navbar() {
           <NavLink
             to="/authors"
             className={({ isActive }) =>
-              isActive ? "block text-blue-600 font-bold" : "block hover:text-blue-500"
+              isActive
+                ? "block text-blue-600 font-bold"
+                : "block hover:text-blue-500"
             }
           >
             Archives
@@ -216,7 +232,9 @@ export default function Navbar() {
           <NavLink
             to="/process"
             className={({ isActive }) =>
-              isActive ? "block text-blue-600 font-bold" : "block hover:text-blue-500"
+              isActive
+                ? "block text-blue-600 font-bold"
+                : "block hover:text-blue-500"
             }
           >
             Register
