@@ -3,7 +3,16 @@ import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [aboutDropdown, setAboutDropdown] = useState(false);
+  const [registerDropdown, setRegisterDropdown] = useState(false);
+
+  const linkClasses = ({ isActive }) =>
+    isActive ? "text-blue-600 font-bold" : "hover:text-blue-500";
+
+  const dropdownLinkClasses = ({ isActive }) =>
+    `px-4 py-2 ${
+      isActive ? "bg-blue-100 font-bold text-blue-600" : "hover:bg-gray-100"
+    }`;
 
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50">
@@ -19,102 +28,63 @@ export default function Navbar() {
 
         {/* Desktop Links */}
         <div className="hidden md:flex space-x-6 items-center font-semibold">
-          <NavLink
-            to="/"
-            className={({ isActive }) =>
-              isActive ? "text-blue-600 font-bold" : "hover:text-blue-500"
-            }
-          >
+          <NavLink to="/" className={linkClasses}>
             Home
           </NavLink>
+          <NavLink to="/current-issues" className={linkClasses}>
+            Current Issues
+          </NavLink>
+          <NavLink to="/archives" className={linkClasses}>
+            Archives
+          </NavLink>
 
-          {/* View Journal Dropdown */}
+          {/* About Dropdown */}
           <div
             className="relative cursor-pointer"
-            onMouseEnter={() => setDropdownOpen(true)}
-            onMouseLeave={() => setDropdownOpen(false)}
+            onMouseEnter={() => setAboutDropdown(true)}
+            onMouseLeave={() => setAboutDropdown(false)}
           >
-            <span className="hover:text-blue-500">View Journal</span>
-            {dropdownOpen && (
+            <span className="hover:text-blue-500">About</span>
+            {aboutDropdown && (
               <div className="absolute top-4 flex flex-col bg-white shadow-lg rounded-md mt-2 w-52 z-10">
-                <NavLink
-                  to="/about"
-                  className={({ isActive }) =>
-                    `px-4 py-2 ${
-                      isActive ? "bg-blue-100 font-bold" : "hover:bg-gray-100"
-                    }`
-                  }
-                >
-                  About Journal
+                <NavLink to="/about-journal" className={dropdownLinkClasses}>
+                  The Journal
                 </NavLink>
-                <NavLink
-                  to="/guidelines"
-                  className={({ isActive }) =>
-                    `px-4 py-2 ${
-                      isActive ? "bg-blue-100 font-bold" : "hover:bg-gray-100"
-                    }`
-                  }
-                >
-                  Authors' Guidelines
+                <NavLink to="/submissions" className={dropdownLinkClasses}>
+                  Submissions
                 </NavLink>
-                <NavLink
-                  to="/editorial-team"
-                  className={({ isActive }) =>
-                    `px-4 py-2 ${
-                      isActive ? "bg-blue-100 font-bold" : "hover:bg-gray-100"
-                    }`
-                  }
-                >
+                <NavLink to="/editorial-team" className={dropdownLinkClasses}>
                   Editorial Team
-                </NavLink>
-                <NavLink
-                  to="/privacy"
-                  className={({ isActive }) =>
-                    `px-4 py-2 ${
-                      isActive ? "bg-blue-100 font-bold" : "hover:bg-gray-100"
-                    }`
-                  }
-                >
-                  Privacy Statement
-                </NavLink>
-                <NavLink
-                  to="/contact"
-                  className={({ isActive }) =>
-                    `px-4 py-2 ${
-                      isActive ? "bg-blue-100 font-bold" : "hover:bg-gray-100"
-                    }`
-                  }
-                >
-                  Contact
                 </NavLink>
               </div>
             )}
           </div>
 
-          <NavLink
-            to="/board"
-            className={({ isActive }) =>
-              isActive ? "text-blue-600 font-bold" : "hover:text-blue-500"
-            }
-          >
-            Current Issue
+          <NavLink to="/announcements" className={linkClasses}>
+            Announcements
           </NavLink>
-          <NavLink
-            to="/authors"
-            className={({ isActive }) =>
-              isActive ? "text-blue-600 font-bold" : "hover:text-blue-500"
-            }
-          >
-            Archives
+          <NavLink to="/contact" className={linkClasses}>
+            Contact Us
           </NavLink>
-          <NavLink
-            to="/process"
-            className={({ isActive }) =>
-              isActive ? "text-blue-600 font-bold" : "hover:text-blue-500"
-            }
+
+          {/* Register/Log in Dropdown */}
+          <div
+            className="relative cursor-pointer"
+            onMouseEnter={() => setRegisterDropdown(true)}
+            onMouseLeave={() => setRegisterDropdown(false)}
           >
-            Register
-          </NavLink>
+            <span className="hover:text-blue-500">Register / Log in</span>
+            {registerDropdown && (
+              <div className="absolute top-4 flex flex-col bg-white shadow-lg rounded-md mt-2 w-52 z-10">
+                <NavLink to="/submission" className={dropdownLinkClasses}>
+                  Submissions
+                </NavLink>
+                <NavLink to="/editorial-team" className={dropdownLinkClasses}>
+                  Editorial Team
+                </NavLink>
+              </div>
+            )}
+          </div>
         </div>
 
         {/* Hamburger Icon for Mobile */}
@@ -146,98 +116,38 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu - Flat List with Active States */}
       {isOpen && (
         <div className="md:hidden px-4 pb-4 space-y-2 font-semibold">
-          <NavLink
-            to="/"
-            className={({ isActive }) =>
-              isActive
-                ? "block text-blue-600 font-bold"
-                : "block hover:text-blue-500"
-            }
-          >
+          <NavLink to="/" className={linkClasses}>
             Home
           </NavLink>
-          <NavLink
-            to="/about"
-            className={({ isActive }) =>
-              isActive
-                ? "block text-blue-600 font-bold"
-                : "block hover:text-blue-500"
-            }
-          >
-            About Journal
+          <NavLink to="/current-issues" className={linkClasses}>
+            Current Issues
           </NavLink>
-          <NavLink
-            to="/guidelines"
-            className={({ isActive }) =>
-              isActive
-                ? "block text-blue-600 font-bold"
-                : "block hover:text-blue-500"
-            }
-          >
-            Authors' Guidelines
-          </NavLink>
-          <NavLink
-            to="/editorial-team"
-            className={({ isActive }) =>
-              isActive
-                ? "block text-blue-600 font-bold"
-                : "block hover:text-blue-500"
-            }
-          >
-            Editorial Team
-          </NavLink>
-          <NavLink
-            to="/privacy"
-            className={({ isActive }) =>
-              isActive
-                ? "block text-blue-600 font-bold"
-                : "block hover:text-blue-500"
-            }
-          >
-            Privacy Statement
-          </NavLink>
-          <NavLink
-            to="/contact"
-            className={({ isActive }) =>
-              isActive
-                ? "block text-blue-600 font-bold"
-                : "block hover:text-blue-500"
-            }
-          >
-            Contact
-          </NavLink>
-          <NavLink
-            to="/board"
-            className={({ isActive }) =>
-              isActive
-                ? "block text-blue-600 font-bold"
-                : "block hover:text-blue-500"
-            }
-          >
-            Current Issue
-          </NavLink>
-          <NavLink
-            to="/authors"
-            className={({ isActive }) =>
-              isActive
-                ? "block text-blue-600 font-bold"
-                : "block hover:text-blue-500"
-            }
-          >
+          <NavLink to="/archives" className={linkClasses}>
             Archives
           </NavLink>
-          <NavLink
-            to="/process"
-            className={({ isActive }) =>
-              isActive
-                ? "block text-blue-600 font-bold"
-                : "block hover:text-blue-500"
-            }
-          >
-            Register
+          <NavLink to="/about-journal" className={linkClasses}>
+            The Journal
+          </NavLink>
+          <NavLink to="/submissions" className={linkClasses}>
+            Submissions
+          </NavLink>
+          <NavLink to="/editorial-team" className={linkClasses}>
+            Editorial Team
+          </NavLink>
+          <NavLink to="/announcements" className={linkClasses}>
+            Announcements
+          </NavLink>
+          <NavLink to="/contact" className={linkClasses}>
+            Contact Us
+          </NavLink>
+          <NavLink to="/submission" className={linkClasses}>
+            Submissions
+          </NavLink>
+          <NavLink to="/editorial-team" className={linkClasses}>
+            Editorial Team
           </NavLink>
         </div>
       )}
