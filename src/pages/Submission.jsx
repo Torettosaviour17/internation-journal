@@ -1,140 +1,97 @@
 export default function Submission() {
   return (
-    <div className="max-w-4xl mx-auto p-6 text-gray-800">
-      <h1 className="text-2xl font-bold mb-4">Submission</h1>
+    <div className="max-w-5xl mx-auto p-6 text-gray-800">
+      <h1 className="text-3xl font-bold text-center mb-6 text-green-700">
+        Guidelines for Submission of Manuscripts
+      </h1>
 
-      <h2 className="text-xl font-semibold mt-6 mb-2">Manuscript Format</h2>
-      <p className="mb-4">
-        Papers must be assembled in this order: Title page, Abstract,
-        Introduction, Methods, Results, Discussion, Conclusion, Ethical
-        Clearance, Acknowledgements, Sources of Funding, Conflict of Interest,
-        Authors contributions, References.
-      </p>
-      <ul className="list-disc pl-6 space-y-2">
+      <ol className="list-decimal pl-6 space-y-4 text-lg">
         <li>
-          <strong>Introduction:</strong> Concise background and clear objective.
+          An electronic copy of the manuscript (preferably as an MS Word
+          attachment) should be submitted to the Editor-in-Chief via the journal
+          email address.
         </li>
         <li>
-          <strong>Methods:</strong> Clear for reproducibility.
+          Papers should bear the <strong>title</strong>,{" "}
+          <strong>name of author(s)</strong>,{" "}
+          <strong>institutional affiliation</strong>, <strong>email</strong>,
+          and <strong>phone numbers</strong>.
         </li>
         <li>
-          <strong>Results:</strong> Logical sequence using text, tables, charts.
+          Manuscripts should be prepared according to the{" "}
+          <strong>
+            7th edition of the American Psychological Association (APA)
+          </strong>{" "}
+          publication manual.
         </li>
         <li>
-          <strong>Discussion:</strong> Cover pertinent issues from introduction
-          & results.
+          Contributors should provide a brief headnote (abstract) of about{" "}
+          <strong>150–200 words</strong>.
         </li>
         <li>
-          <strong>Conclusion:</strong> State relevant conclusion from results.
+          Manuscripts should not exceed <strong>20 pages</strong> in length and
+          must be typed in <strong>double line spacing</strong> on{" "}
+          <strong>A4 size paper</strong>.
         </li>
-      </ul>
+        <li>
+          Use <strong>Times New Roman, 12pt font size</strong>.
+        </li>
+        <li>
+          Only original manuscripts written in{" "}
+          <strong>English (British spelling style)</strong> will be considered.
+        </li>
+        <li>
+          Manuscripts must <strong>not have been previously published</strong>,
+          nor be under <strong>simultaneous review elsewhere</strong>.
+        </li>
+        <li>
+          Submissions must be accompanied by a{" "}
+          <strong>non-refundable peer-review fee of ₦5,000</strong>. Accepted
+          papers will attract a <strong>publication fee of ₦20,000</strong>.
+        </li>
+        <li>
+          All articles will undergo <strong>plagiarism checks</strong>. Only
+          papers with a similarity index not exceeding <strong>20%</strong> will
+          be considered.
+        </li>
+        <li>
+          Submit articles via email:{" "}
+          <a
+            href="mailto:ijmsdjournal@gmail.com"
+            className="text-blue-600 underline"
+          >
+            ijmsdjournal@gmail.com
+          </a>
+          <br />
+          Journal website:{" "}
+          <a
+            href="http://ijmsd.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 underline"
+          >
+            http://ijmsd.com
+          </a>
+        </li>
+      </ol>
 
-      <h2 className="text-xl font-semibold mt-6 mb-2">Length of Manuscripts</h2>
-      <p className="mb-4">
-        Articles: 3,500–5,000 words, max 10 authors, max six tables/figures,
-        references: 10–25 (preferably within the last 10 years).
-      </p>
-
-      <h2 className="text-xl font-semibold mt-6 mb-2">Formatting</h2>
-      <p className="mb-4">
-        British (UK) English, Times New Roman, 12pt, single-spaced, 2.5cm
-        margins, A4 paper. Pages numbered. Figures/tables placed within text.
-      </p>
-
-      <h2 className="text-xl font-semibold mt-6 mb-2">
-        Title Page Requirements
+      <h2 className="text-2xl font-semibold mt-10 mb-4 text-green-700">
+        For Further Inquiries
       </h2>
-      <ul className="list-disc pl-6 space-y-2">
-        <li>Concise title (max 25 words, no abbreviations)</li>
-        <li>Author names, affiliations, emails</li>
-        <li>Funding sources</li>
-        <li>Word count (text and abstract separately)</li>
-        <li>Conflict of interest & authors’ contributions</li>
-      </ul>
-
-      <h2 className="text-xl font-semibold mt-6 mb-2">Abstract</h2>
-      <p className="mb-4">
-        Max 200 words with: Background, Objectives, Methods, Results,
-        Conclusions. 4–5 keywords required.
+      <p className="text-lg mb-2">
+        <strong>Contact:</strong> Dr George Udoh
       </p>
-
-      <h2 className="text-xl font-semibold mt-6 mb-2">
-        Figures, Tables & Illustrations
-      </h2>
-      <p className="mb-4">
-        Tables self-explanatory, non-duplicative, Roman numerals for numbering,
-        JPEG preferred for figures.
+      <p className="text-lg mb-2">
+        Lecturer, Department of Mass Communication
+        <br />
+        Ritman University, Ikot Ekpene, Akwa Ibom State, Nigeria
       </p>
-
-      <h2 className="text-xl font-semibold mt-6 mb-2">Authorship Criteria</h2>
-      <ul className="list-disc pl-6 space-y-2">
-        <li>Conceptualisation, data, analysis contribution</li>
-        <li>Drafting & critical revision</li>
-        <li>Approval of final version</li>
-        <li>Accountability for all work aspects</li>
-      </ul>
-
-      <h2 className="text-xl font-semibold mt-6 mb-2">Conflict of Interest</h2>
-      <p className="mb-4">
-        All personal/financial ties must be disclosed as per CSE guidelines.
-      </p>
-
-      <h2 className="text-xl font-semibold mt-6 mb-2">Acknowledgements</h2>
-      <p className="mb-4">
-        Acknowledge general support, grants, technical help, with consent.
-      </p>
-
-      <h2 className="text-xl font-semibold mt-6 mb-2">References</h2>
-      <p className="mb-4">APA Style 7th Edition required.</p>
-
-      <h2 className="text-xl font-semibold mt-6 mb-2">
-        Submission Preparation Checklist
-      </h2>
-      <ul className="list-disc pl-6 space-y-2">
-        <li>Not published elsewhere.</li>
-        <li>MS Word format.</li>
-        <li>Full author details provided.</li>
-        <li>Conflict of interest disclosed.</li>
-        <li>Word & figure/table limits observed.</li>
-        <li>Recent & adequate references.</li>
-        <li>British English, proper formatting applied.</li>
-        <li>APA citation style followed.</li>
-      </ul>
-
-      <h2 className="text-xl font-semibold mt-6 mb-2">Declarations</h2>
-      <ul className="list-disc pl-6 space-y-2">
-        <li>Ethical Clearance</li>
-        <li>Acknowledgements</li>
-        <li>Sources of Funding</li>
-        <li>Conflict of Interest</li>
-        <li>Authors’ Contributions</li>
-        <li>Data Availability</li>
-      </ul>
-
-      <h2 className="text-xl font-semibold mt-6 mb-2">How to Submit</h2>
-      <p className="mb-4">
-        Submit via email:{" "}
-        <a
-          href="mailto:editorijssar@gmail.com"
-          className="text-blue-600 underline"
-        >
-          editorijssar@gmail.com
-        </a>{" "}
-        or{" "}
-        <a
-          href="mailto:kenadibenwafor@gmail.com"
-          className="text-blue-600 underline"
-        >
-          kenadibenwafor@gmail.com
+      <p className="text-lg">
+        <strong>Phone:</strong>{" "}
+        <a href="tel:+2347061585726" className="text-blue-600 underline">
+          +234 706 158 5726
         </a>
-        . Manuscript ID will be issued after receipt.
       </p>
-
-      <h2 className="text-xl font-semibold mt-6 mb-2">Copyright Notice</h2>
-      <p className="mb-4">Authors retain full rights on accepted papers.</p>
-
-      <h2 className="text-xl font-semibold mt-6 mb-2">Privacy Statement</h2>
-      <p className="mb-4">Emails/names used only for journal purposes.</p>
     </div>
   );
 }
