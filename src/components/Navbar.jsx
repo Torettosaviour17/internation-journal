@@ -60,9 +60,6 @@ export default function Navbar() {
             )}
           </div>
 
-          <NavLink to="/announcements" className={linkClasses}>
-            Announcements
-          </NavLink>
           <NavLink to="/contact" className={linkClasses}>
             Contact Us
           </NavLink>
@@ -141,10 +138,6 @@ export default function Navbar() {
           <br />
           <NavLink to="/editorial-team" className={linkClasses}>
             Editorial Team
-          </NavLink>
-          <br />
-          <NavLink to="/announcements" className={linkClasses}>
-            Announcements
           </NavLink>
           <br />
           <NavLink to="/contact" className={linkClasses}>
