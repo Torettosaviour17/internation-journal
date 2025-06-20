@@ -128,6 +128,10 @@ export default function Navbar() {
           <NavLink to="/contact" className={linkClasses}>
             Contact Us
           </NavLink>
+          <br />
+          <NavLink to="/register" className={linkClasses}>
+            Register
+          </NavLink>
         </div>
       )}
     </nav>

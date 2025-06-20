@@ -22,8 +22,8 @@ export default function Register() {
 
   return (
     <div className="flex flex-col md:flex-row gap-4 p-4 w-full">
-      <div className="w-[70%] flex justify-center items-start  bg-gray-50">
-        <div className="bg-white shadow-md border border-red-100 p-8 rounded-md w-[70%] l">
+      <div className="md:w-[70%] w-full flex justify-center items-start  bg-gray-50">
+        <div className="bg-white shadow-md border border-red-100 p-5 md:p-8 rounded-md w-full md:w-[70%]">
           <h2 className="text-2xl font-semibold mb-6 text-gray-700">
             Create An Account
           </h2>
