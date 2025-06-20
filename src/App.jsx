@@ -9,11 +9,12 @@ import CurrentIssues from "./pages/CurrentIssues";
 import Archives from "./pages/Archives";
 import Announcements from "./pages/Announcements";
 import Register from "./pages/Register";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <>
-      <Navbar />
+      <Navbar />,
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/submissions" element={<Submission />} />
@@ -26,6 +27,7 @@ function App() {
         <Route path="/announcements" element={<Announcements />} />
         <Route path="/register" element={<Register />} />
       </Routes>
+      <Footer />
     </>
   );
 }

@@ -64,24 +64,9 @@ export default function Navbar() {
             Contact Us
           </NavLink>
 
-          {/* Register/Log in Dropdown */}
-          <div
-            className="relative cursor-pointer"
-            onMouseEnter={() => setRegisterDropdown(true)}
-            onMouseLeave={() => setRegisterDropdown(false)}
-          >
-            <span className="hover:text-blue-500">Register / Log in</span>
-            {registerDropdown && (
-              <div className="absolute top-4 flex flex-col bg-white shadow-lg rounded-md mt-2 w-52 z-10">
-                <NavLink to="/submission" className={dropdownLinkClasses}>
-                  Submissions
-                </NavLink>
-                <NavLink to="/editorial-team" className={dropdownLinkClasses}>
-                  Editorial Team
-                </NavLink>
-              </div>
-            )}
-          </div>
+          <NavLink to="/register" className={linkClasses}>
+            Register
+          </NavLink>
         </div>
 
         {/* Hamburger Icon for Mobile */}
