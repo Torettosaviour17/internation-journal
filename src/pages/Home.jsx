@@ -3,10 +3,10 @@ import AsideSection from "../components/AsideSection";
 export default function Home() {
   return (
     <div className="flex flex-col md:flex-row gap-4 p-4 w-full">
-      <div className="w-[80%] mx-auto p-6 pr-0 text-gray-800">
+      <div className="md:w-[80%]  mx-auto md:pl-6 p-6 px-2 text-gray-800">
         <h1 className="text-3xl font-bold mb-6 text-center text-blue-600">
-          Welcome to the International Journal of Scientific Studies and Medical
-          Discoveries (IJSSMD)
+          Welcome to the International Journal of Media and Sustainable
+          Development (IJMSD)
         </h1>
 
         <p className="mb-4 text-lg leading-relaxed">
