@@ -1,38 +1,5 @@
+import teamMembers from "./EditorialTeamData";
 import { motion } from "framer-motion";
-
-const teamMembers = [
-  {
-    name: "Jane Doe",
-    position: "Managing Editor",
-    image: "https://via.placeholder.com/300x300?text=Jane+Doe",
-    bio: "Passionate about media and sustainable development research.",
-  },
-  {
-    name: "John Smith",
-    position: "Reviewer",
-    image: "https://via.placeholder.com/300x300?text=John+Smith",
-    bio: "Expert in media analysis and peer review processes.",
-  },
-  {
-    name: "Dr. Lisa Green",
-    position: "Senior Editor",
-    image: "https://via.placeholder.com/300x300?text=Lisa+Green",
-    bio: "Focused on environmental and communication studies.",
-  },
-  {
-    name: "Toretto Saviour",
-    position: "Frontend Developer",
-    image: "/team/toretto.jpg", // put your image in public/team/toretto.jpg
-    bio: "Bringing ideas to life with code. Reach me via my portfolio.",
-    portfolio: "https://torettosaviourportfolio.vercel.app", // Your placeholder portfolio link here
-  },
-  {
-    name: "Michael Lee",
-    position: "Editorial Assistant",
-    image: "https://via.placeholder.com/300x300?text=Michael+Lee",
-    bio: "Supports submission handling and author correspondence.",
-  },
-];
 
 export default function EditorialTeam() {
   return (
@@ -49,26 +16,21 @@ export default function EditorialTeam() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.2 }}
           >
-            <div className="overflow-hidden">
-              <img
-                src={member.image}
-                alt={member.name}
-                className="w-full h-64 object-cover transform hover:scale-110 transition duration-500"
-              />
-            </div>
-            <div className="p-4">
-              <h2 className="text-xl font-semibold text-green-700">
-                {member.name}
-              </h2>
-              <p className="text-sm text-gray-500 mb-2">{member.position}</p>
-              <p className="text-gray-600 text-sm mb-2">{member.bio}</p>
-              {/* Show Portfolio link only for Toretto */}
+            <img
+              src={member.image}
+              alt={member.name}
+              className="w-full h-64 object-cover"
+            />
+            <div className="p-4 text-center">
+              <h3 className="font-bold text-xl">{member.name}</h3>
+              <p className="text-gray-600">{member.position}</p>
+              <p className="text-gray-500 text-sm mt-2">{member.bio}</p>
               {member.portfolio && (
                 <a
                   href={member.portfolio}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block mt-2 text-blue-600 text-sm hover:underline"
+                  className="text-blue-600 text-sm hover:underline"
                 >
                   Visit Portfolio
                 </a>
