@@ -65,7 +65,7 @@ export default function AsideSection() {
             </Link>
           </li>
           <li>
-            <Link to="" className="hover:underline">
+            <Link to="/submissions" className="hover:underline">
               Authors' Guidelines
             </Link>
           </li>

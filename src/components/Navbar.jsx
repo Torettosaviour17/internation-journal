@@ -35,7 +35,7 @@ export default function Navbar() {
       <div className="md:px-12 px-3 flex justify-between p-2 items-center">
         {/* Logo */}
         <a href="/">
-          <img
+        <img
             src="/journal-logo.jpg"
             alt="Journal Logo"
             className="h-[70px]"
