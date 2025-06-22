@@ -38,9 +38,13 @@ export default function Navbar() {
           <img
             src="/journal-logo.jpg"
             alt="Journal Logo"
-            className="h-[100px]"
+            className="h-[70px]"
           />
         </a>
+        <div className="font-bold text-md">
+          {" "}
+          International Journal of Media and Sustainable Development (IJMSD)
+        </div>
 
         {/* Desktop Links */}
         <div className="hidden md:flex space-x-6 items-center font-semibold">
@@ -76,12 +80,12 @@ export default function Navbar() {
             )}
           </div>
 
-          <NavLink to="/contact" className={linkClasses}>
-            Contact Us
-          </NavLink>
-
           <NavLink to="/register" className={linkClasses}>
             Register
+          </NavLink>
+
+          <NavLink to="/contact" className={linkClasses}>
+            Contact Us
           </NavLink>
         </div>
 

@@ -22,7 +22,7 @@ export default function AsideSection() {
               Read more...
             </p>
           </div>
-          <div>
+          {/* <div>
             <Link
               to="/indexed"
               className="text-blue-600 font-medium hover:underline"
@@ -33,8 +33,8 @@ export default function AsideSection() {
               The Editorial Team is excited to announce the journal indexing.
               Read more...
             </p>
-          </div>
-          <div>
+          </div> */}
+          {/* <div>
             <Link
               to="/doi"
               className="text-blue-600 font-medium hover:underline"
@@ -44,7 +44,7 @@ export default function AsideSection() {
             <p className="text-sm text-gray-600">
               We now provide DOIs for all articles published. Read more...
             </p>
-          </div>
+          </div> */}
         </div>
       </div>
 
@@ -65,7 +65,7 @@ export default function AsideSection() {
             </Link>
           </li>
           <li>
-            <Link to="/guidelines" className="hover:underline">
+            <Link to="" className="hover:underline">
               Authors' Guidelines
             </Link>
           </li>
@@ -98,7 +98,7 @@ export default function AsideSection() {
         </p>
         <ul className="list-disc list-inside space-y-1 text-blue-600">
           <li>DOAJ: Directory of Open Access Journal</li>
-          <li>Zenodo</li>
+          <li>Coming Soon</li>
           <li>Google Scholar</li>
         </ul>
       </div>
