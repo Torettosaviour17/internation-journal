@@ -10,10 +10,12 @@ export default function ContactUs() {
           contact:
         </p>
         <p className="text-lg mb-2">
-          <strong>Dr George Udoh</strong>
+          <strong>Edikan Ukpong</strong>
+          <br />
+          <i>Managing Editor</i>
           <br />
           Lecturer, Department of Mass Communication <br />
-          Ritman University, Ikot Ekpene, Akwa Ibom State, Nigeria
+          Ritman University, Ikot Ekpene, Nigeria
         </p>
         <p className="text-lg mb-2">
           <strong>Email:</strong>{" "}

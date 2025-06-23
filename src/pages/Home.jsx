@@ -96,7 +96,13 @@ export default function Home() {
           <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center text-green-700">
             Current Issues
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <p className="text-lg">
+            The maiden edition (Vol. 1, Number 1, August 2025) of the
+            International Journal of Media and Sustainable Development (IJMSD)
+            is now open for submissions. Accepted papers for this edition will
+            be published and made available online soon.
+          </p>
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[1, 2].map((issue) => (
               <div
                 key={issue}
@@ -120,7 +126,7 @@ export default function Home() {
                 </button>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
 
         <div className="mt-10 md:pb-10">
