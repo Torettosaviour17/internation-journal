@@ -10,6 +10,8 @@ import Archives from "./pages/Archives";
 import Announcements from "./pages/Announcements";
 import Register from "./pages/Register";
 import Footer from "./components/Footer";
+import MakeSubmission from "./pages/MakeSubmission";
+
 
 function App() {
   return (
@@ -26,6 +28,7 @@ function App() {
         <Route path="/archives" element={<Archives />} />
         <Route path="/announcements" element={<Announcements />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/submission" element={<MakeSubmission />} />
       </Routes>
       <Footer />
     </>

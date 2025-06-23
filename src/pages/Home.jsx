@@ -69,7 +69,10 @@ export default function Home() {
           Read More
         </Link>
 
-        
+        <h2 className="text-3xl font-bold mt-10 mb-6 text-center text-green-700">
+          Current Issues
+        </h2>
+
         {/* <>
           <h2 className="text-3xl font-bold mt-10 mb-6 text-center text-green-700">
             Meet Our Editorial Team
