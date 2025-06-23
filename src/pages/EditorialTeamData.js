@@ -2,7 +2,7 @@ const teamMembers = [
   {
     name: "Edikan Ukpong",
     position: "Managing Editor",
-    image: "https://via.placeholder.com/300x300?text=Jane+Doe",
+    image: "/team/Edikan.jpg",
     bio: "Passionate about media and sustainable development research.",
   },
   {
