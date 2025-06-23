@@ -166,7 +166,9 @@ export default function AboutJournal() {
           </p>
         </div>
       </div>
-      <AsideSection />
+      <div className="md:w-[30%] w-full">
+        <AsideSection />
+      </div>{" "}
     </div>
   );
 }

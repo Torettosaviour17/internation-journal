@@ -14,7 +14,9 @@ export default function CurrentIssues() {
           published and made available online soon.
         </p>
       </div>
-      <AsideSection />
+      <div className="md:w-[30%] w-full">
+        <AsideSection />
+      </div>{" "}
     </div>
   );
 }

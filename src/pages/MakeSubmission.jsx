@@ -113,7 +113,9 @@ export default function MakeSubmission() {
           </button>
         </form>
       </div>
-      <AsideSection />
+      <div className="md:w-[30%] w-full">
+        <AsideSection />
+      </div>{" "}
     </div>
   );
 }

@@ -320,7 +320,9 @@ export default function AboutSubmission() {
           </div>
         </div>
       </div>
-      <AsideSection />
+      <div className="md:w-[30%] w-full">
+        <AsideSection />
+      </div>{" "}
     </div>
   );
 }

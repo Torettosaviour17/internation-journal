@@ -10,8 +10,9 @@ export default function Archives() {
           maiden edition is published.
         </p>
       </div>
-      <AsideSection />
+      <div className="md:w-[30%] w-full">
+        <AsideSection />
+      </div>{" "}
     </div>
   );
 }
- 

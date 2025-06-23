@@ -31,7 +31,9 @@ export default function ContactUs() {
           </a>
         </p>
       </div>
-      <AsideSection />
+      <div className="md:w-[30%] w-full">
+        <AsideSection />
+      </div>{" "}
     </div>
   );
 }
