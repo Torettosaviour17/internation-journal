@@ -123,7 +123,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mt-10">
+        <div className="mt-10 md:pb-10">
           <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center text-purple-700">
             Meet Our Editorial Team
           </h2>

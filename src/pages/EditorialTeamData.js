@@ -1,6 +1,6 @@
 const teamMembers = [
   {
-    name: "Jane Doe",
+    name: "Edikan Ukpong",
     position: "Managing Editor",
     image: "https://via.placeholder.com/300x300?text=Jane+Doe",
     bio: "Passionate about media and sustainable development research.",
@@ -25,10 +25,10 @@ const teamMembers = [
     portfolio: "https://torettosaviourportfolio.vercel.app",
   },
   {
-    name: "Michael Lee",
-    position: "Editorial Assistant",
-    image: "https://via.placeholder.com/300x300?text=Michael+Lee",
-    bio: "Supports submission handling and author correspondence.",
+    name: "Abasiemek Akpan",
+    position: "Backend Developer",
+    image: "/team/Abasiemek-Akpan.jpg",
+    bio: "Backend developer with a passion for building robust systems.",
   },
 ];
 
