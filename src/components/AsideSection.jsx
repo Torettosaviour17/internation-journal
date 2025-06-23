@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function AsideSection() {
   return (
-    <aside className="w-full md:w-1/4 p-4 space-y-6">
+    <aside className="w-full md:w-[80%] p-4 space-y-6">
       {/* Latest News */}
       <div className="border border-gray-300 rounded-lg p-4 shadow-sm bg-white">
         <h2 className="text-xl font-semibold text-green-700 mb-3">

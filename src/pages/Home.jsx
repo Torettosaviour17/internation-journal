@@ -35,7 +35,7 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col md:flex-row gap-4 pt-0 p-4 w-full max-w-7xl mx-auto">
+    <div className="flex flex-col md:flex-row pt-0 p-4 w-full ">
       <div className="md:w-[70%] w-full md:pl-6 px-2 text-gray-800">
         <h1 className="text-3xl md:text-[38px] font-bold mb-6 text-center text-blue-600">
           Welcome to IJMSD
