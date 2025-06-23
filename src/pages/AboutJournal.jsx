@@ -2,16 +2,16 @@ import AsideSection from "../components/AsideSection";
 
 export default function AboutJournal() {
   return (
-    <div className="flex flex-col md:flex-row gap-4 p-4 w-full">
-      <div className="w-[80%] pr-0 mx-auto p-6 text-gray-800">
+    <div className="flex flex-col md:flex-row gap-4 pt-0 p-4 w-full">
+      <div className="md:w-[80%] mx-auto md:pl-6 p-6 px-2 text-gray-800">
         <h1 className="text-3xl font-bold mb-6 text-green-700 text-center">
           ABOUT THE JOURNAL
         </h1>
 
         <div>
           <p>
-            International Journal of Media and Sustainable Development (IJMSD) is
-            a peer-reviewed, interdisciplinary journal that promotes
+            International Journal of Media and Sustainable Development (IJMSD)
+            is a peer-reviewed, interdisciplinary journal that promotes
             thought-provoking and solution-oriented scholarship that brings
             together media, communication, and sustainable development. It
             published academic research articles by academics, researchers,
@@ -164,8 +164,6 @@ export default function AboutJournal() {
             <br />
             pISSN: Coming soon
           </p>
-
-      
         </div>
       </div>
       <AsideSection />

@@ -35,13 +35,13 @@ export default function Navbar() {
       <div className="md:px-12 px-3 flex justify-between p-2 items-center">
         {/* Logo */}
         <a href="/">
-        <img
+          <img
             src="/journal-logo.jpg"
             alt="Journal Logo"
             className="h-[70px]"
           />
         </a>
-        <div className="font-bold text-md">
+        <div className="font-bold text-md hidden lg:block">
           {" "}
           International Journal of Media and Sustainable Development (IJMSD)
         </div>

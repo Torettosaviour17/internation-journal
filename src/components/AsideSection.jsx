@@ -109,8 +109,9 @@ export default function AsideSection() {
           Journal Cover
         </h2>
         <Link
-          to="/journal-cover.pdf" // Change this to your actual file path
+          to="/interational-cover.jpg" // Must match exactly the file name in /public folder
           target="_blank"
+          download // this triggers the download, not open
           className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition duration-300 inline-block"
         >
           Download here

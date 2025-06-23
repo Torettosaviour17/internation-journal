@@ -29,8 +29,8 @@ export default function Home() {
           Welcome
         </h1>
 
-        <div className="flex w-full">
-          <p className="w-[80%]">
+        <div className="md:flex  w-full">
+          <p className="w-full flex md:w-[80%]">
             International Journal of Media and Sustainable Development (IJMSD)
             is a peer-reviewed, interdisciplinary journal that promotes
             thought-provoking and solution-oriented scholarship that brings
@@ -46,7 +46,7 @@ export default function Home() {
           <img
             src="/interational-cover.jpg"
             alt="Journal Cover"
-            className="w-[15%]"
+            className="w-[505] md:w-[15%]"
           />
         </div>
 
@@ -69,38 +69,40 @@ export default function Home() {
           Read More
         </Link>
 
-        {/* Editorial Team Carousel here */}
-        <h2 className="text-3xl font-bold mt-10 mb-6 text-center text-green-700">
-          Meet Our Editorial Team
-        </h2>
-        <Slider {...settings}>
-          {teamMembers.map((member, index) => (
-            <div key={index} className="p-4">
-              <div className="bg-white shadow-md rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-full h-64 object-cover"
-                />
-                <div className="p-4 text-center">
-                  <h3 className="font-bold text-xl">{member.name}</h3>
-                  <p className="text-gray-600">{member.position}</p>
-                  <p className="text-gray-500 text-sm mt-2">{member.bio}</p>
-                  {member.portfolio && (
-                    <a
-                      href={member.portfolio}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-600 text-sm hover:underline"
-                    >
-                      Visit Portfolio
-                    </a>
-                  )}
+        
+        {/* <>
+          <h2 className="text-3xl font-bold mt-10 mb-6 text-center text-green-700">
+            Meet Our Editorial Team
+          </h2>
+          <Slider {...settings}>
+            {teamMembers.map((member, index) => (
+              <div key={index} className="p-4">
+                <div className="bg-white shadow-md rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-64 object-cover"
+                  />
+                  <div className="p-4 text-center">
+                    <h3 className="font-bold text-xl">{member.name}</h3>
+                    <p className="text-gray-600">{member.position}</p>
+                    <p className="text-gray-500 text-sm mt-2">{member.bio}</p>
+                    {member.portfolio && (
+                      <a
+                        href={member.portfolio}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-600 text-sm hover:underline"
+                      >
+                        Visit Portfolio
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </Slider>
+            ))}
+          </Slider>
+        </> */}
       </div>
 
       <AsideSection />
