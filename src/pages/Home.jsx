@@ -134,9 +134,9 @@ export default function Home() {
             Meet Our Editorial Team
           </h2>
           <div className="slider-container px-2">
-            <Slider {...settings}>
+            <Slider {...settings} className="mb-6 md:mb-0">
               {teamMembers.map((member) => (
-                <div key={member.id} className="p-2">
+                <div key={member.id} className="p-2 mb-6">
                   <div className="bg-white shadow-md rounded-lg overflow-hidden h-full flex flex-col">
                     <div className="flex justify-center pt-4">
                       <img

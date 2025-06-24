@@ -47,7 +47,7 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Links */}
-        <div className="hidden md:flex space-x-6 items-center font-semibold">
+        <div className="hidden md:flex space-x-5 items-center font-semibold">
           <NavLink to="/" className={linkClasses}>
             Home
           </NavLink>
@@ -122,7 +122,7 @@ export default function Navbar() {
       <div
         className={`md:hidden fixed top-0 right-0 w-[80%] h-full bg-white z-40 transform transition-transform duration-300 ease-in-out mobile-menu ${
           isOpen ? "translate-x-0" : "translate-x-full"
-        } flex flex-col text-lg text-center space-y-10 font-bold pt-20`}
+        } flex flex-col text-lg text-center space-y-8 font-bold pt-20`}
       >
         <NavLink to="/" className={linkClasses} onClick={handleMobileLinkClick}>
           Home
