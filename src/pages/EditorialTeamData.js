@@ -54,7 +54,7 @@ const teamMembers = [
     bio: "Specialist in research quality assessment and methodology.",
   },
   {
-    name: "Mr Uforo Eyo",
+    name: "Mr Eyo, Uforo",
     position: "Reviewer",
     image: "https://via.placeholder.com/300x300?text=Lisa+Green",
     bio: "Reviewer with a focus on innovation and scholarly integrity.",
