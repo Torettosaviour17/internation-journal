@@ -41,7 +41,7 @@ export default function Navbar() {
             className="h-[70px]"
           />
         </a>
-        <div className="font-bold text-md hidden lg:block">
+        <div className="font-bold text-md text-green-800 hidden lg:block">
           {" "}
           International Journal of Media and Sustainable Development (IJMSD)
         </div>
