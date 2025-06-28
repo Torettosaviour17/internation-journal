@@ -11,6 +11,9 @@ import Announcements from "./pages/Announcements";
 import Register from "./pages/Register";
 import Footer from "./components/Footer";
 import MakeSubmission from "./pages/MakeSubmission";
+import Login from "./pages/Login";
+import ForgotPassword from "./pages/ForgotPassword";
+
 
 
 function App() {
@@ -29,6 +32,8 @@ function App() {
         <Route path="/announcements" element={<Announcements />} />
         <Route path="/register" element={<Register />} />
         <Route path="/submission" element={<MakeSubmission />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
       <Footer />
     </>
