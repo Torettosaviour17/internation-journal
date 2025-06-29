@@ -11,14 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('journals', function (Blueprint $table) {
-            $table->id();
-            $table->string('title');
-            $table->string('author');
-            $table->string('pdf_path');
-            $table->string('status')->default('pending');
-            $table->timestamps();
-        });
+        Schema::create('password_resets', function (Blueprint $table) {
+        $table->string('email')->index();
+        $table->string('token');
+        $table->timestamp('created_at')->nullable();
+    });
+        
     }
 
     /**
@@ -26,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('journals');
+        Schema::dropIfExists('password_resets');
     }
 };
