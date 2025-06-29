@@ -7,7 +7,7 @@ class StoreSubmissionRequest extends FormRequest
 {
     public function authorize(): bool
     {
-        return true; // Allow all users (you can change this later)
+        return true;
     }
 
     public function rules(): array

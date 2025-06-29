@@ -1,24 +1,54 @@
 <?php
 namespace App\Http\Controllers;
 
+use App\Services\SubmissionService;
 use App\Models\Submission;
 use App\Http\Requests\StoreSubmissionRequest;
 use Illuminate\Http\Request;
 
 class SubmissionController extends Controller
 {
-    public function store (StoreSubmissionRequest $request)
+    protected SubmissionService $service;
+
+    public function __construct(SubmissionService $service)
     {
- $path = $request->file('manuscript')->store('manuscripts', 'public');
+        $this->service = $service;
 
-    Submission::create([
-        'title' => $request->title,
-        'author_name' => $request->authorName,
-        'email' => $request->email,
-        'manuscript_path' => $path,
-        'message' => $request->message,
-    ]);
-
-    return response()->json(['message' => 'Submission received successfully!']);
+        $this->middleware('auth:sanctum');
     }
+
+    public function store(StoreSubmissionRequest $request)
+    {
+        $this->service->createSubmission($request);
+
+        return response()->json(['message' => 'Submission received successfully!']);
+    }
+
+    public function show($id)
+    {
+        $submission = $this->service->findUserSubmission($id);
+
+        return response()->json($submission);
+    }
+
+
+    public function index()
+    {
+        $submission = $this->service->getUserSubmissions();
+    }
+
+    public function update(Request $request, $id)
+    {
+        $submission = $this->service->updateSubmission($id, $request);
+
+        return response()->json(['message' => 'Submission update Successful', 'submission' => $submission]);
+    }
+
+    public function destroy($id)
+    {
+        $this->service->deleteSubmission($id);
+
+        return response()->json(['message' => 'Submission Deleted Successfully']);
+    }
+
 }
