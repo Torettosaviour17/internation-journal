@@ -33,9 +33,12 @@ class SubmissionController extends Controller
 
 
     public function index()
-    {
-        $submission = $this->service->getUserSubmissions();
-    }
+{
+    $submissions = $this->service->getUserSubmissions();
+
+    return response()->json($submissions);
+}
+
 
     public function update(Request $request, $id)
     {
