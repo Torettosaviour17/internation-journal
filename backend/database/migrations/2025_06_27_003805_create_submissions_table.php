@@ -15,7 +15,7 @@ return new class extends Migration
         $table->id();
         $table->foreignId('user_id')->constrained()->onDelete('cascade');
         $table->string('title');
-        $table->string('author_name');
+        $table->string('authorName');
         $table->string('email');
         $table->text('message')->nullable();
         $table->string('manuscript_path');

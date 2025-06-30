@@ -16,7 +16,7 @@ class StoreSubmissionRequest extends FormRequest
             'title' => 'required|string',
             'authorName' => 'required|string',
             'email' => 'required|email',
-            'manuscript' => 'required|file|mimes:pdf,doc,docx|max:2048',
+            'manuscript' => 'required|file|mimes:pdf,doc,docx',
             'message' => 'nullable|string',
         ];
     }

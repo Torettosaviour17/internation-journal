@@ -14,7 +14,7 @@ class SubmissionService
         return Submission::create([
             'user_id' => auth()->id(),
             'title' => $request->title,
-            'author_name' => $request->authorName,
+            'authorName' => $request->authorName,
             'email' => $request->email,
             'manuscript_path' => $path,
             'message' => $request->message,
