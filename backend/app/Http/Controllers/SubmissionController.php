@@ -42,7 +42,7 @@ class SubmissionController extends Controller
 
     public function update(Request $request, $id)
     {
-        $submission = $this->service->updateSubmission($id, $request);
+        $submission = $this->service->updateSubmission($request , $id);
 
         return response()->json(['message' => 'Submission update Successful', 'submission' => $submission]);
     }
