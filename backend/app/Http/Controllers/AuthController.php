@@ -58,29 +58,30 @@ class AuthController extends Controller
     }
 
     public function forgotPassword(ForgotPasswordRequest $request)
-    {
-        $status = Password::sendResetLink($request->only('email'));
+{
+    $token = app('auth.password.broker')->createToken(
+        User::where('email', $request->email)->firstOrFail()
+    );
 
-        return $status === Password::RESET_LINK_SENT
-            ? response()->json(['message' => __($status)])
-            : response()->json(['message' => __($status)], 400);
+    return response()->json([
+        'message' => 'Password reset token generated.',
+        'reset_token' => $token,
+    ]);
+}
+   public function resetPassword(ResetPasswordRequest $request)
+{
+    $user = User::where('email', $request->email)->firstOrFail();
+
+    if (!app('auth.password.broker')->tokenExists($user, $request->token)) {
+        return response()->json(['message' => 'Invalid or expired token.'], 400);
     }
 
-    public function resetPassword(ResetPasswordRequest $request)
-    {
-        $status = Password::reset(
-            $request->only('email', 'password', 'password_confirmation', 'token'),
-            function ($user, $password) {
-                $user->forceFill([
-                    'password' => Hash::make($password),
-                ])->save();
-            }
-        );
+    $user->forceFill([
+        'password' => Hash::make($request->password),
+    ])->save();
 
-        return $status === Password::PASSWORD_RESET
-            ? response()->json(['message' => __($status)])
-            : response()->json(['message' => __($status)], 400);
-    }
+    return response()->json(['message' => 'Password reset successful.']);
+}
 }
 
 
