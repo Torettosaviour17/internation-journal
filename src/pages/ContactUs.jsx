@@ -20,10 +20,10 @@ export default function ContactUs() {
         <p className="text-lg mb-2">
           <strong>Email:</strong>{" "}
           <a
-            href="mailto:ijmsdjournal@gmail.com"
+            href="mailto:viceddy2012@gmail.com"
             className="text-blue-600 underline"
           >
-            ijmsdjournal@gmail.com
+            viceddy2012@gmail.com
           </a>
         </p>
         <p className="text-lg">
