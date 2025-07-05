@@ -1,3 +1,4 @@
+// src/App.jsx
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Submission from "./pages/Submission";
@@ -14,29 +15,41 @@ import MakeSubmission from "./pages/MakeSubmission";
 import Login from "./pages/Login";
 import ForgotPassword from "./pages/ForgotPassword";
 
-
-
 function App() {
   return (
-    <>
-      <Navbar />,
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/submissions" element={<Submission />} />
-        <Route path="*" element={<div>Page Not Found</div>} />
-        <Route path="/about-journal" element={<AboutJournal />} />
-        <Route path="/editorial-team" element={<EditorialTeam />} />
-        <Route path="/contact" element={<ContactUs />} />
-        <Route path="/current-issues" element={<CurrentIssues />} />
-        <Route path="/archives" element={<Archives />} />
-        <Route path="/announcements" element={<Announcements />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/submission" element={<MakeSubmission />} />
-        <Route path="/forgot-password" element={<ForgotPassword />} />
-        <Route path="/login" element={<Login />} />
-      </Routes>
-      <Footer />
-    </>
+    <div className="relative min-h-screen">
+      {/* Background watermark */}
+      <div 
+        className="fixed inset-0 bg-cover bg-center opacity-5 z-0"
+        style={{ 
+          backgroundImage: `url('/journal-logo.jpg')`,
+          backgroundSize: '40%',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center',
+        }}
+      ></div>
+      
+      {/* Content with higher z-index */}
+      <div className="relative z-10">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/submissions" element={<Submission />} />
+          <Route path="*" element={<div className="min-h-[60vh] flex items-center justify-center text-2xl">Page Not Found</div>} />
+          <Route path="/about-journal" element={<AboutJournal />} />
+          <Route path="/editorial-team" element={<EditorialTeam />} />
+          <Route path="/contact" element={<ContactUs />} />
+          <Route path="/current-issues" element={<CurrentIssues />} />
+          <Route path="/archives" element={<Archives />} />
+          <Route path="/announcements" element={<Announcements />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/submission" element={<MakeSubmission />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+        <Footer />
+      </div>
+    </div>
   );
 }
 
