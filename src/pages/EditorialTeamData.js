@@ -74,7 +74,7 @@ const teamMembers = [
   {
     name: "Toretto Saviour",
     position: "Frontend Developer",
-    image: "/team/toretto.jpg",
+    image: "/team/toretto1.jpg",
     bio: "Bringing ideas to life with code. Reach me via my portfolio.",
     portfolio: "https://torettosaviourportfolio.vercel.app",
   },
