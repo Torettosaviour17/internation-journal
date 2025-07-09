@@ -153,9 +153,9 @@ export default function AboutJournal() {
             <br />
             P.O. Box 1321, Ikot Ekpene, Akwa Ibom State, Nigeria.
             <br />
-            Email: ijmsdjournal@gmail.com, edikan.ukpong@ritman.edu.ng
+            Email: viceddy2012@gmail.com, edikan.ukpong@ritman.edu.ng
             <br />
-            Phone number: +2347061585726
+            Phone number: +234 706 158 5726
           </p>
 
           <h2 className="font-semibold">Journal Identifiers</h2>
