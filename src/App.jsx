@@ -14,28 +14,35 @@ import Footer from "./components/Footer";
 import MakeSubmission from "./pages/MakeSubmission";
 import Login from "./pages/Login";
 import ForgotPassword from "./pages/ForgotPassword";
+import CallForPapers from "./pages/CallForPapers";
+
 
 function App() {
   return (
     <div className="relative min-h-screen">
-      {/* Background watermark */}
-      <div 
+      <div
         className="fixed inset-0 bg-cover bg-center opacity-5 z-0"
-        style={{ 
+        style={{
           backgroundImage: `url('/journal-logo.jpg')`,
-          backgroundSize: '40%',
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'center',
+          backgroundSize: "40%",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
         }}
       ></div>
-      
-      {/* Content with higher z-index */}
+
       <div className="relative z-10">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/submissions" element={<Submission />} />
-          <Route path="*" element={<div className="min-h-[60vh] flex items-center justify-center text-2xl">Page Not Found</div>} />
+          <Route
+            path="*"
+            element={
+              <div className="min-h-[60vh] flex items-center justify-center text-3xl font-bold text-green-500">
+                Page Not Found
+              </div>
+            }
+          />
           <Route path="/about-journal" element={<AboutJournal />} />
           <Route path="/editorial-team" element={<EditorialTeam />} />
           <Route path="/contact" element={<ContactUs />} />
@@ -46,6 +53,7 @@ function App() {
           <Route path="/submission" element={<MakeSubmission />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/call-for-papers" element={<CallForPapers />} />
         </Routes>
         <Footer />
       </div>
