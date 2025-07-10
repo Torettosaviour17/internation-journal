@@ -19,7 +19,7 @@ import CallForPapers from "./pages/CallForPapers";
 
 function App() {
   return (
-    <div className="relative min-h-screen">
+    <div className="relative min-h-screen dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
       <div
         className="fixed inset-0 bg-cover bg-center opacity-5 z-0"
         style={{
