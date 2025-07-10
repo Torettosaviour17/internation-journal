@@ -126,7 +126,7 @@ export default function Navbar() {
         </div>
 
         {/* ── Hamburger (mobile) ────────────────────────────────────── */}
-        <div className="md:hidden flex items-center menu-button">
+        <div className="md:hidden flex items-center menu-button dark:text-white">
           <button onClick={() => setIsOpen(!isOpen)}>
             <svg
               className="h-10 w-10"
