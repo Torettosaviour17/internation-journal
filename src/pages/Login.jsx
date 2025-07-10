@@ -14,15 +14,15 @@ export default function Login() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-blue-50 px-4">
-      <div className="bg-white shadow-lg rounded-lg p-8 w-full max-w-md">
-        <h1 className="text-3xl font-bold text-center text-green-700 mb-6">
+    <div className="flex items-center justify-center min-h-screen bg-blue-50 dark:bg-gray-900 px-4">
+      <div className="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-8 w-full max-w-md border border-gray-200 dark:border-gray-700">
+        <h1 className="text-3xl font-bold text-center text-green-700 dark:text-green-400 mb-6">
           Login to IJMSD
         </h1>
 
         <form onSubmit={handleSubmit} className="space-y-5">
           <div>
-            <label className="block mb-1 font-medium text-gray-700">
+            <label className="block mb-1 font-medium text-gray-700 dark:text-gray-300">
               Email
             </label>
             <input
@@ -31,12 +31,12 @@ export default function Login() {
               required
               value={formData.email}
               onChange={handleChange}
-              className="w-full border border-gray-300 px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-green-500"
+              className="w-full border border-gray-300 dark:border-gray-600 px-4 py-2 rounded bg-white dark:bg-gray-700 text-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-green-500 dark:focus:ring-green-400"
             />
           </div>
 
           <div>
-            <label className="block mb-1 font-medium text-gray-700">
+            <label className="block mb-1 font-medium text-gray-700 dark:text-gray-300">
               Password
             </label>
             <input
@@ -45,20 +45,20 @@ export default function Login() {
               required
               value={formData.password}
               onChange={handleChange}
-              className="w-full border border-gray-300 px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-green-500"
+              className="w-full border border-gray-300 dark:border-gray-600 px-4 py-2 rounded bg-white dark:bg-gray-700 text-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-green-500 dark:focus:ring-green-400"
             />
           </div>
 
           <div className="flex justify-between items-center text-sm">
             <Link
               to="/forgot-password"
-              className="text-blue-600 hover:underline"
+              className="text-blue-600 dark:text-blue-400 hover:underline"
             >
               Forgot password?
             </Link>
             <Link
               to="/register"
-              className="text-green-600 font-medium hover:underline"
+              className="text-green-600 dark:text-green-400 font-medium hover:underline"
             >
               Register
             </Link>
@@ -66,7 +66,7 @@ export default function Login() {
 
           <button
             type="submit"
-            className="w-full bg-green-600 text-white py-2 rounded font-semibold hover:bg-green-700 transition"
+            className="w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded font-semibold transition"
           >
             Login
           </button>
