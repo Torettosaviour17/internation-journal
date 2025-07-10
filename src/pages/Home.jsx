@@ -35,9 +35,9 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col md:flex-row pt-0 p-4 w-full ">
-      <div className="md:w-[70%] w-full md:pl-6 px-2 text-gray-800">
-        <h1 className="text-3xl md:text-[38px] font-bold mt-5 mb-6 text-center text-blue-600">
+    <div className="flex flex-col md:flex-row pt-0 p-4 w-full  dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+      <div className="md:w-[70%] w-full md:pl-6 px-2 text-gray-800 dark:text-gray-100">
+        <h1 className="text-3xl md:text-[38px] font-bold mt-5 mb-6 text-center text-blue-600 dark:text-blue-400">
           Welcome to IJMSD
         </h1>
 
@@ -69,8 +69,8 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="bg-blue-50 p-6 rounded-xl mb-8">
-          <h2 className="text-2xl font-semibold mb-4 text-blue-800">
+        <div className="bg-blue-50 dark:bg-gray-800 p-6 rounded-xl mb-8">
+          <h2 className="text-2xl font-semibold mb-4 dark:text-blue-300 text-blue-800">
             Aims and Scope
           </h2>
           <p className="mb-4 text-base md:text-lg">
@@ -93,7 +93,7 @@ export default function Home() {
         </div>
 
         <div className="mb-8">
-          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center text-green-700">
+          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center text-green-700 dark:text-green-400">
             Current Issues
           </h2>
           <p className="text-lg">
@@ -130,27 +130,29 @@ export default function Home() {
         </div>
 
         <div className="mt-10 md:pb-10">
-          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center text-purple-700">
+          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center text-purple-700 dark:text-purple-400">
             Meet Our Editorial Team
           </h2>
           <div className="slider-container px-2">
             <Slider {...settings} className="mb-6 md:mb-0">
               {teamMembers.map((member) => (
                 <div key={member.id} className="p-2 mb-6">
-                  <div className="bg-white shadow-md rounded-lg overflow-hidden h-full flex flex-col">
+                  <div className="bg-white dark:bg-gray-900 shadow-md rounded-lg overflow-hidden h-full flex flex-col">
                     <div className="flex justify-center pt-4">
                       <img
                         src={member.image}
                         alt={member.name}
-                        className="w-32 h-32 rounded-full object-cover border-4 border-white shadow-md"
+                        className="w-32 h-32 rounded-full object-cover border-4 border-white dark:border-gray-700 shadow-md"
                       />
                     </div>
                     <div className="p-4 text-center flex-grow">
                       <h3 className="font-bold text-xl mb-1">{member.name}</h3>
-                      <p className="text-green-600 font-medium mb-2">
+                      <p className="text-green-600 dark:text-green-400 font-medium mb-2">
                         {member.position}
                       </p>
-                      <p className="text-gray-600 text-sm">{member.bio}</p>
+                      <p className="text-gray-600 dark:text-gray-300 text-sm">
+                        {member.bio}
+                      </p>
                     </div>
                   </div>
                 </div>
