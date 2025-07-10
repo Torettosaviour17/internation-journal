@@ -21,7 +21,7 @@ export default function Navbar() {
   const linkClasses = ({ isActive }) =>
     isActive
       ? "text-blue-600 font-bold"
-      : "hover:text-blue-500 dark:hover:text-blue-400"; // dark tweak
+      : "hover:text-blue-500 dark:hover:text-blue-400 dark:text-white"; // dark tweak
 
   const dropdownLinkClasses = ({ isActive }) =>
     `px-4 py-2 ${
@@ -86,11 +86,11 @@ export default function Navbar() {
             onMouseEnter={() => setAboutDropdown(true)}
             onMouseLeave={() => setAboutDropdown(false)}
           >
-            <span className="hover:text-blue-500 dark:hover:text-blue-400">
+            <span className="hover:text-blue-500 dark:text-white dark:hover:text-blue-400">
               About
             </span>
             {aboutDropdown && (
-              <div className="absolute top-4 flex flex-col bg-white dark:bg-gray-800 shadow-lg rounded-md mt-2 w-52 z-10">
+              <div className="absolute top-4 flex flex-col bg-white dark:bg-gray-800 shadow-lg dark:text-white  rounded-md mt-2 w-52 z-10">
                 <NavLink to="/about-journal" className={dropdownLinkClasses}>
                   The Journal
                 </NavLink>
