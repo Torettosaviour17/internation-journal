@@ -30,6 +30,18 @@ const teamMembers = [
     bio: "Skilled researcher specializing in media and communication.",
   },
   {
+    name: "Dr Etimbuk Ebong Idiong",
+    position: "Editorial Board Members",
+    image: "https://via.placeholder.com/300x300?text=Lisa+Green",
+    bio: "Department of Strategic and Corporate Communication Faculty of Communication and Media Studies University of Uyo",
+  },
+  {
+    name: "Dr Philomena Umoren",
+    position: "Editorial Board Members",
+    image: "https://via.placeholder.com/300x300?text=Lisa+Green",
+    bio: "Department of Mass Communication Faculty of Social Sciences Akwa Ibom State University.",
+  },
+  {
     name: "Dr George Udoh",
     position: "Editorial Board Members",
     image: "https://via.placeholder.com/300x300?text=Lisa+Green",
