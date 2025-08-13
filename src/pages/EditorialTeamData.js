@@ -42,6 +42,24 @@ const teamMembers = [
     bio: "Department of Mass Communication Faculty of Social Sciences Akwa Ibom State University.",
   },
   {
+    name: "Dr. Emeke Precious Nwaoboli",
+    position: "Editorial Board Members",
+    image: "/team/Emeke.jpg",
+    bio: "Department of Mass Communication Faculty of Social Sciences Benson Idahosa University, Edo State",
+  },
+  {
+    name: "Okponkpong, Grace Imaikop",
+    position: "Editorial Board Members",
+    image: "/team/Okponkpong.jpg",
+    bio: "Department of Mass Communication College of Management and Social Sciences Covenant University, Ota",
+  },
+  {
+    name: "Itohowo Paul Ignatius",
+    position: "Editorial Board Members",
+    image: "/team/itohowo.jpg",
+    bio: " Ph.D Department of Philosophy Faculty of Arts Akwa Ibom State University",
+  },
+  {
     name: "Dr George Udoh",
     position: "Editorial Board Members",
     image: "https://via.placeholder.com/300x300?text=Lisa+Green",
