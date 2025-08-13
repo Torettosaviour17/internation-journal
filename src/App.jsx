@@ -1,4 +1,3 @@
-// src/App.jsx
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Submission from "./pages/Submission";
@@ -15,7 +14,7 @@ import MakeSubmission from "./pages/MakeSubmission";
 import Login from "./pages/Login";
 import ForgotPassword from "./pages/ForgotPassword";
 import CallForPapers from "./pages/CallForPapers";
-
+import ScrollToTop from "./pages/scrollToTop";
 
 function App() {
   return (
@@ -32,6 +31,7 @@ function App() {
 
       <div className="relative z-10">
         <Navbar />
+        <ScrollToTop /> {/* Added here */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/submissions" element={<Submission />} />
